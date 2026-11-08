@@ -43,21 +43,21 @@ Mọi số đo trong README này lấy từ **một máy ảo VMware**, chưa ph
 | Thành phần | Phiên bản |
 |---|---|
 | Hệ điều hành | Ubuntu 26.04 (trong VMware), kernel 7.0.0-38-generic |
-| CPU / RAM của máy ảo | (điền: kết quả `lscpu` và `free -h`) |
+| CPU / RAM của máy ảo | 2 vCPU (13th Gen Intel(R) Core(TM) i7-1355U), RAM 7.2Gi |
 | Java | OpenJDK 17.0.20.1 |
 | Kafka | 3.7.0 (Scala 2.13), chế độ ZooKeeper 3.8.3 |
 | Hadoop | 3.5.0 (đã cài, chưa dùng ở tầng Edge) |
 | Spark | 4.2.0, Scala 2.13.18 (đã cài, chưa dùng ở tầng Edge) |
 | Docker | docker.io 29.1.3 |
-| MinIO | `scnd/minio-mirror:RELEASE.2025-09-07T16-13-09Z`, digest: (điền) |
-| Python | (điền: `python3 --version`) |
+| MinIO | `scnd/minio-mirror:RELEASE.2025-09-07T16-13-09Z`, image ID: sha256:52dfd5c0bbd38d3219f2058c7af216d9f9a27a994b7b5baad09bbd38866015ff; repo digest: scnd/minio-mirror@sha256:52dfd5c0bbd38d3219f2058c7af216d9f9a27a994b7b5baad09bbd38866015ff |
+| Python | 3.14.4 |
 | Thư viện chính | OpenCV 5.0.0, kafka-python 3.0.12; các thư viện khác xem `requirements.txt` |
 
 Lưu ý về MinIO: image chính thức `minio/minio` đã bị gỡ khỏi Docker Hub, nên dùng một **bản sao của bên thứ ba** (phiên bản cố định, giấy phép AGPLv3 theo log khởi động). Chỉ dùng trong máy ảo học tập, không đưa ra mạng ngoài, và không có cập nhật bảo mật.
 
 ## 4. Dataset
 
-NEU-DET (khuyết tật bề mặt thép cán nóng), nguồn: (điền link Kaggle).
+NEU-DET (khuyết tật bề mặt thép cán nóng), nguồn: Kaggle, bộ NEU surface defect database (NEU-DET).
 
 - 1800 ảnh xám 200×200, 6 lớp × 300 ảnh: `crazing`, `inclusion`, `patches`, `pitted_surface`, `rolled-in_scale`, `scratches`.
 - Chia sẵn: `train` 240 ảnh/lớp (1440 ảnh), `validation` 60 ảnh/lớp (360 ảnh).
