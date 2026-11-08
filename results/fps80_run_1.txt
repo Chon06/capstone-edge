@@ -1,0 +1,32 @@
+
+             BÁO CÁO TOÀN VẸN DỮ LIỆU         
+Nhận: 360 tin (360 khung), frame_seq từ 1 đến 360
+Trùng lặp: 0, Thiếu: 0 khung
+
+--- PHÂN TÍCH ĐỘ TRỄ & HIỆU SUẤT ---
+FPS thực tế tại Consumer: 68.98 khung/giây (đã bỏ 10 khung warmup)
+
+1. edge_latency_ms (Tổng độ trễ Edge):
+  - Tất cả: TB 13.29 | P95 18.48 | P99 25.94 | Max 30.53
+  - Ổn định (sau 10 khung đầu): TB 13.22 | P95 18.15 | P99 25.94
+2. inference_ms (Tốc độ chạy AI Random Forest):
+  - Tất cả: TB 6.94 | P95 11.66 | P99 13.94 | Max 16.88
+  - Ổn định (sau 10 khung đầu): TB 6.90 | P95 11.27 | P99 13.94
+3. upload_ms (Tốc độ đẩy ảnh lên MinIO):
+  - Tất cả: TB 6.35 | P95 9.22 | P99 12.16 | Max 17.17
+  - Ổn định (sau 10 khung đầu): TB 6.32 | P95 9.10 | P99 12.16
+
+--- ĐÁNH GIÁ CHẤT LƯỢNG AI ---
+                 precision    recall  f1-score   support
+
+        crazing       0.98      1.00      0.99        60
+      inclusion       1.00      0.87      0.93        60
+        patches       1.00      0.98      0.99        60
+ pitted_surface       0.92      0.98      0.95        60
+rolled-in_scale       0.98      1.00      0.99        60
+      scratches       0.95      1.00      0.98        60
+
+       accuracy                           0.97       360
+      macro avg       0.97      0.97      0.97       360
+   weighted avg       0.97      0.97      0.97       360
+

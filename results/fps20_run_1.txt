@@ -1,0 +1,29 @@
+
+             BÁO CÁO TOÀN VẸN DỮ LIỆU         
+Nhận: 360 tin (360 khung khác nhau), frame_seq từ 1 đến 360
+Trùng lặp: 0
+Thiếu: 0 khung
+
+--- THỐNG KÊ TRẠNG THÁI (EDGE STATUS) ---
+Tổng khung NG (Phát hiện lỗi): 356
+Tổng khung OK (Bình thường): 4
+
+--- PHÂN TÍCH ĐỘ TRỄ ---
+edge_latency_ms (Tổng độ trễ Edge): trung bình 11.54, P95 18.98, P99 23.33, lớn nhất 31.93
+inference_ms (Tốc độ chạy AI Random Forest): trung bình 5.15, P95 7.09, P99 12.32, lớn nhất 18.85
+upload_ms (Tốc độ đẩy ảnh lên MinIO): trung bình 6.39, P95 10.86, P99 15.84, lớn nhất 25.39
+
+--- ĐÁNH GIÁ CHẤT LƯỢNG AI TỪ LUỒNG THẬT ---
+                 precision    recall  f1-score   support
+
+        crazing       0.98      1.00      0.99        60
+      inclusion       1.00      0.87      0.93        60
+        patches       1.00      0.98      0.99        60
+ pitted_surface       0.92      0.98      0.95        60
+rolled-in_scale       0.98      1.00      0.99        60
+      scratches       0.95      1.00      0.98        60
+
+       accuracy                           0.97       360
+      macro avg       0.97      0.97      0.97       360
+   weighted avg       0.97      0.97      0.97       360
+
